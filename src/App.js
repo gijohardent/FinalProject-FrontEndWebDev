@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
-//import Home from './components/Home';
+import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -8,6 +8,7 @@ const App = () => {
     <>
       <NavBar />
       <Header />
+      <Hero />
       <Footer />
     </>
   );
