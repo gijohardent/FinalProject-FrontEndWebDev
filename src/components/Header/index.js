@@ -1,20 +1,21 @@
+import React, { useState, useEffect } from "react";
+import bg from "../../images/bg.jpg";
+
 export default function Header() {
+  const text = "Text Reveal Animation 💫";
+
   return (
-    <div className="relative isolate overflow-hidden bg-slate-50 dark:bg-gray-900 py-24 sm:py-32">
-      <div
-        aria-hidden="true"
-        className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
-      ></div>
-      <div
-        aria-hidden="true"
-        className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-      ></div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="font-display text-5xl font-semibold tracking-tight text-teal-500 sm:text-7xl">
+    <div className="relative isolate overflow-hidden bg-gray-100 dark:bg-gray-900 py-32 sm:py-52 ">
+      <img
+        src={bg}
+        className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+      ></img>
+      <div className="overflow-hidden mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="animate-text-reveal [animation-fill-mode:backwards] px-4 mx-auto text-center py-10 lg:py-10">
+          <h1 className="font-display font-bold text-pretty text-5xl text-white sm:text-6xl">
             klab.at space
-          </h2>
-          <p className="font-body mt-8 text-pretty text-lg font-medium text-yellow-800 sm:text-xl/8">
+          </h1>
+          <p className="font-body text-pretty text-lg font-medium text-gray-200 sm:text-xl">
             a social space - a getaway - a garden
           </p>
         </div>

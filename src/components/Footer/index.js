@@ -1,21 +1,25 @@
-const Footer = () => {
+import instagram from "../../images/instagram.png";
+import whatsapp from "../../images/whatsapp.png";
+import youtube from "../../images/youtube.png";
+
+const socialMedia = [
+  { Image: whatsapp, href: "http://wa.me/628114333323" },
+  { Image: instagram, href: "https://www.instagram.com/klab.atspace/" },
+  { Image: youtube, href: "https://www.youtube.com/@Klab.atSpace" },
+];
+
+export default function Footer() {
   return (
-    <div id="footer" className="pt-24 pb-12 bg-white dark:bg-gray-900">
-      <div className="container">
-        <div className="flex flex-wrap">
-          <div className="w-full px-4 mb-12 text-gray-900 dark:text-slate-200 font-medium text-center">
-            <h2 className="font-bold text-4xl text-gray-900 dark:text-white mb-5">
-              klab.at
-            </h2>
-            <h3 className="font-bold text-base text-gray-900 dark:text-white mb-5">
-              Contact Us
-            </h3>
-          </div>
-        </div>
-        <div className="w-full px-4 mb-12 items-center"></div>
+    <div className="mx-auto mt-36   bg-gray-800 py-24 sm:py-3">
+      <div className="mx-auto mt-20 mb-20 max-w-2xl lg:mx-0 lg:max-w-none">
+        <dl className="mt-16 grid grid-cols-3 sm:mt-20">
+          {socialMedia.map((item) => (
+            <a href={item.href} className="flex flex-col-reverse items-center">
+              <img className="rounded-md size-10" src={item.Image}></img>
+            </a>
+          ))}
+        </dl>
       </div>
     </div>
   );
-};
-
-export default Footer;
+}
